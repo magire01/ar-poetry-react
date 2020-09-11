@@ -27,16 +27,11 @@ const AboutPage = () => {
     return (
         <Box>
             <Grid container direction="row">
-                <Grid item md="8" sm="12" style={divMargins}>
                 
-                    <h3 style={textStyle.subtitle1}>About Me</h3>
-                    <p style={textStyle.text}> Test about me test about me test about me test about me test about me test about me test about me test about me test about me test  me test about me test about me test aboutabout </p>
-                    <p style={textStyle.text}> Test about me test about me test about me test about me test about me test about me test about me test about me test about me test  me test about me test about me test aboutabout </p>
-                </Grid>
-                <Grid item md="4" sm="12" style={divMargins}>
-                    <h3 style={textStyle.subtitle2}>Poetry Book info</h3>
-                    <p style={textStyle.text}> Test about me test about me test about me test about me test about me test about me test about me test about me test about me test  me test about me test about me test aboutabout </p>
-                </Grid>
+                <h3 style={textStyle.subtitle1}>About Me</h3>
+                <p style={textStyle.text}> Test about me test about me test about me test about me test about me test about me test about me test about me test about me test  me test about me test about me test aboutabout </p>
+                <p style={textStyle.text}> Test about me test about me test about me test about me test about me test about me test about me test about me test about me test  me test about me test about me test aboutabout </p>
+               
                     
                 
             </Grid>

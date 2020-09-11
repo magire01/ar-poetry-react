@@ -10,7 +10,8 @@ const Header = () => {
         color: "#213c80",
         padding: 0,
         marginBottom: 0,
-        textAlign: "center"
+        textAlign: "center",
+        fontFamily: "Merienda"
     }
 
     const header2Style = {
@@ -19,6 +20,7 @@ const Header = () => {
         marginTop: 0,
         marginBottom: 10,
         textAlign: "center",
+        fontFamily: "Rock Salt"
     }
     
     return (
