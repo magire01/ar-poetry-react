@@ -2,28 +2,32 @@ import React from 'react';
 import "react-responsive-carousel/lib/styles/carousel.min.css"
 import { Carousel } from 'react-responsive-carousel'
 
+import BookItem from "./SliderItems/BookItem"
+import FeaturedPoems from "./SliderItems/FeaturedPoems"
+import FeaturedReviews from "./SliderItems/FeaturedReviews"
+
 
 
 const Slider = () => {
 
   const sliderStyle = {
-    height: 700,
+    height: "auto",
     width: "auto",
-    backgroundColor: "lightblue"
+    backgroundColor: "white"
   }
 
   return (
     <Carousel infiniteLoop autoPlay="true" interval="5000">
         <div style={sliderStyle}> 
-          <p>Buy the book on Amazon</p>
+          <BookItem />
 
         </div>
         <div style={sliderStyle}> 
-          <p>Recent Poems</p>
+          <FeaturedPoems />
   
         </div>
         <div style={sliderStyle}> 
-          <p>Recent Movies </p>
+          <FeaturedReviews />
           
         </div>
     </Carousel>
