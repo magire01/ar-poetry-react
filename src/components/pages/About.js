@@ -14,12 +14,12 @@ const AboutPage = () => {
             fontSize: 30
         },
         subtitle2: {
-            color: "#213c80",
+            color: "black",
             textAlign: "center",
             fontSize: 20
         },
         text: {
-            color: "#213c80",
+            color: "black",
             fontSize: 20
         }
     }
