@@ -181,6 +181,11 @@ const PoetryPage = () => {
         poemEntry: {
             marginTop: 20,
             marginBottom: 40
+        },
+        header: {
+            fontSize: 40,
+            textAlign: "center",
+            marginTop: 5
         }
     }
     
@@ -188,15 +193,13 @@ const PoetryPage = () => {
         <Box>
             <Grid container direction="row">
                 <Grid item md="12" sm="12">
-                    <h3>Poetry</h3>
+                    <h3 style={stylePoems.header}>Poetry</h3>
                 </Grid>
-                <Grid item md="12" sm="12">
-                    <p> Test about me test about me test about me test about me test about me test about me test about me test about me test about me test  me test about me test about me test aboutabout </p>
-                </Grid>
+               
                 <Grid item md="12" sm="12">
                     {poemData.data.map(( data, index ) => (
                         <div style={stylePoems.poemEntry}>
-                            <PoemButton title={data.title} text={nl2br(data.text)} />
+                            <PoemButton title={data.title} text={nl2br(data.text)} date={data.datePosted} info={data.addInfo} />
                         </div>
                     ))}
                 </Grid>
