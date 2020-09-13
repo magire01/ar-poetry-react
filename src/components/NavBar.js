@@ -34,7 +34,6 @@ const NavBar = () => {
     switch(navState.page) {
         case "poetry":
             return (
-            
                 <Grid
                     container
                     spacing={1}
@@ -42,14 +41,22 @@ const NavBar = () => {
                     alignItems="center"
                     justify="center"
                 >
-                    <Link to="/contact"><div onClick={() => setNavState({ page: "contact" })} style={buttonStyle.notSelected}>Contact</div></Link>
-                    <Link to="/"><div onClick={() => setNavState({ page: "aboutMe" })} style={buttonStyle.notSelected}>Bio</div></Link>
-                    <Link style={{textDecoration: "none"}} to="/poetry"><div onClick={() => setNavState({ page: "poetry" })} style={buttonStyle.selected}>Poems</div></Link>
-                    <Link to="/movies"><div onClick={() => setNavState({ page: "movies" })} style={buttonStyle.notSelected}>Movies</div></Link>
-                    <Link to="/stories"><div onClick={() => setNavState({ page: "stories" })} style={buttonStyle.notSelected}>Stories</div></Link>
-                    
+                    <Grid container md="6" justify="center">
+                        <Link to="/contact"><div onClick={() => setNavState({ page: "contact" })} style={buttonStyle.notSelected}>Contact</div></Link> 
+                        <Link to="/"><div onClick={() => setNavState({ page: "aboutMe" })} style={buttonStyle.notSelected}>Bio</div></Link>
+                    </Grid>
+            
+                    <Grid container md="6" justify="center">
+                        <Link to="/movies"><div onClick={() => setNavState({ page: "movies" })} style={buttonStyle.notSelected}>Movies</div></Link>
+                        <Link to="/stories"><div onClick={() => setNavState({ page: "stories" })} style={buttonStyle.notSelected}>Stories</div></Link>
+                        
+                    </Grid>
+                    <Grid>
+                        <Grid item md="auto" sm="12">
+                            <Link style={{textDecoration: "none"}} to="/poetry"><div onClick={() => setNavState({ page: "poetry" })} style={buttonStyle.selected}>Poems</div></Link>
+                        </Grid>
+                    </Grid>
                 </Grid>
-           
             )
 
         case "movies":
@@ -61,13 +68,20 @@ const NavBar = () => {
                     alignItems="center"
                     justify="center"
                 >
-                    <Link to="/"><div onClick={() => setNavState({ page: "aboutMe" })} style={buttonStyle.notSelected}>Bio</div></Link>
-                    <Link to="/poetry"><div onClick={() => setNavState({ page: "poetry" })} style={buttonStyle.notSelected}>Poems</div></Link>
-                    <Link style={{textDecoration: "none"}} to="/movies"><div onClick={() => setNavState({ page: "movies" })} style={buttonStyle.selected}>Movies</div></Link>
-                    <Link to="/stories"><div onClick={() => setNavState({ page: "stories" })} style={buttonStyle.notSelected}>Stories</div></Link>
-                    <Link to="/contact"><div onClick={() => setNavState({ page: "contact" })} style={buttonStyle.notSelected}>Contact</div></Link>
-                    
-                    
+                    <Grid container md="6" justify="center">
+                        <Link to="/"><div onClick={() => setNavState({ page: "aboutMe" })} style={buttonStyle.notSelected}>Bio</div></Link> 
+                        <Link to="/poetry"><div onClick={() => setNavState({ page: "poetry" })} style={buttonStyle.notSelected}>Poems</div></Link>
+                    </Grid>
+            
+                    <Grid container md="6" justify="center">
+                        <Link to="/stories"><div onClick={() => setNavState({ page: "stories" })} style={buttonStyle.notSelected}>Stories</div></Link>
+                        <Link to="/contact"><div onClick={() => setNavState({ page: "contact" })} style={buttonStyle.notSelected}>Contact</div></Link>
+                    </Grid>
+                    <Grid>
+                        <Grid item md="auto" sm="12">
+                            <Link style={{textDecoration: "none"}} to="/movies"><div onClick={() => setNavState({ page: "movies" })} style={buttonStyle.selected}>Movies</div></Link>
+                        </Grid>
+                    </Grid>
                 </Grid>
             )
         
@@ -80,12 +94,20 @@ const NavBar = () => {
                     alignItems="center"
                     justify="center"
                 >
-                    <Link to="/poetry"><div onClick={() => setNavState({ page: "poetry" })} style={buttonStyle.notSelected}>Poems</div></Link>
-                    <Link to="/movies"><div onClick={() => setNavState({ page: "movies" })} style={buttonStyle.notSelected}>Movies</div></Link>
-                    <Link style={{textDecoration: "none"}} to="/stories"><div onClick={() => setNavState({ page: "stories" })} style={buttonStyle.selected}>Stories</div></Link>
-                    <Link to="/contact"><div onClick={() => setNavState({ page: "contact" })} style={buttonStyle.notSelected}>Contact</div></Link>
-                    <Link to="/"><div onClick={() => setNavState({ page: "aboutMe" })} style={buttonStyle.notSelected}>Bio</div></Link>
-                
+                    <Grid container md="6" justify="center">
+                        <Link to="/poetry"><div onClick={() => setNavState({ page: "poetry" })} style={buttonStyle.notSelected}>Poems</div></Link>
+                        <Link to="/movies"><div onClick={() => setNavState({ page: "movies" })} style={buttonStyle.notSelected}>Movies</div></Link>
+                    </Grid>
+            
+                    <Grid container md="6" justify="center">
+                        <Link to="/contact"><div onClick={() => setNavState({ page: "contact" })} style={buttonStyle.notSelected}>Contact</div></Link>
+                        <Link to="/"><div onClick={() => setNavState({ page: "aboutMe" })} style={buttonStyle.notSelected}>Bio</div></Link>
+                    </Grid>
+                    <Grid>
+                        <Grid item md="auto" sm="12">
+                            <Link style={{textDecoration: "none"}} to="/stories"><div onClick={() => setNavState({ page: "stories" })} style={buttonStyle.selected}>Stories</div></Link>
+                        </Grid>
+                    </Grid>
                 </Grid>
             )
         
@@ -98,11 +120,22 @@ const NavBar = () => {
                     alignItems="center"
                     justify="center"
                 >
-                    <Link to="/movies"><div onClick={() => setNavState({ page: "movies" })} style={buttonStyle.notSelected}>Movies</div></Link>
-                    <Link to="/stories"><div onClick={() => setNavState({ page: "stories" })} style={buttonStyle.notSelected}>Stories</div></Link>
-                    <Link style={{textDecoration: "none"}} to="/contact"><div onClick={() => setNavState({ page: "contact" })} style={buttonStyle.selected}>Contact</div></Link>
-                    <Link to="/"><div onClick={() => setNavState({ page: "aboutMe" })} style={buttonStyle.notSelected}>Bio</div></Link>
-                    <Link to="/poetry"><div onClick={() => setNavState({ page: "poetry" })} style={buttonStyle.notSelected}>Poems</div></Link>
+                    <Grid container md="6" justify="center">
+                        <Link to="/movies"><div onClick={() => setNavState({ page: "movies" })} style={buttonStyle.notSelected}>Movies</div></Link>
+                        <Link to="/stories"><div onClick={() => setNavState({ page: "stories" })} style={buttonStyle.notSelected}>Stories</div></Link>
+                    </Grid>
+            
+                    <Grid container md="6" justify="center">
+                        
+                        <Link to="/"><div onClick={() => setNavState({ page: "aboutMe" })} style={buttonStyle.notSelected}>Bio</div></Link>
+                        <Link to="/poetry"><div onClick={() => setNavState({ page: "poetry" })} style={buttonStyle.notSelected}>Poems</div></Link>
+                        
+                    </Grid>
+                    <Grid>
+                        <Grid item md="auto" sm="12">
+                            <Link style={{textDecoration: "none"}} to="/contact"><div onClick={() => setNavState({ page: "contact" })} style={buttonStyle.selected}>Contact</div></Link>
+                        </Grid>
+                    </Grid>
                 </Grid>
             )
         default:
@@ -114,11 +147,22 @@ const NavBar = () => {
                     alignItems="center"
                     justify="center"
                 >
-                    <Link to="/stories"><div onClick={() => setNavState({ page: "stories" })} style={buttonStyle.notSelected}>Stories</div></Link>
-                    <Link to="/contact"><div onClick={() => setNavState({ page: "contact" })} style={buttonStyle.notSelected}>Contact</div></Link>
-                    <Link style={{textDecoration: "none"}} to="/"><div onClick={() => setNavState({ page: "aboutMe" })} style={buttonStyle.selected}>Bio</div></Link>
-                    <Link to="/poetry"><div onClick={() => setNavState({ page: "poetry" })} style={buttonStyle.notSelected}>Poems</div></Link>
-                    <Link to="/movies"><div onClick={() => setNavState({ page: "movies" })} style={buttonStyle.notSelected}>Movies</div></Link>
+                    <Grid container md="6" justify="center">
+                        <Link to="/stories"><div onClick={() => setNavState({ page: "stories" })} style={buttonStyle.notSelected}>Stories</div></Link>
+                        <Link to="/contact"><div onClick={() => setNavState({ page: "contact" })} style={buttonStyle.notSelected}>Contact</div></Link>
+                        
+                    </Grid>
+            
+                    <Grid container md="6" justify="center">
+                        <Link to="/poetry"><div onClick={() => setNavState({ page: "poetry" })} style={buttonStyle.notSelected}>Poems</div></Link>
+                        <Link to="/movies"><div onClick={() => setNavState({ page: "movies" })} style={buttonStyle.notSelected}>Movies</div></Link>
+                        
+                    </Grid>
+                    <Grid>
+                        <Grid item md="auto" sm="12">
+                            <Link style={{textDecoration: "none"}} to="/"><div onClick={() => setNavState({ page: "aboutMe" })} style={buttonStyle.selected}>Bio</div></Link>
+                        </Grid>
+                    </Grid>
                 </Grid>
             )
     }

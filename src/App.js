@@ -17,7 +17,10 @@ import Slider from "./components/SliderComp/Slider"
 const App = () => {
 
   const bodyStyle = {
-    margin: 25
+    slider: {
+      marginTop: 30
+    } 
+     
   }
 
   return (
@@ -27,8 +30,8 @@ const App = () => {
           <Grid item md="7" sm="12">
             <Header />
           </Grid>
-          <Grid item md="5" sm="12">
-            <Slider />
+          <Grid item md="5" sm="12" style={bodyStyle.slider}>
+              <Slider />
           </Grid>
           <Grid item md="12" sm="12">
             <NavBar />

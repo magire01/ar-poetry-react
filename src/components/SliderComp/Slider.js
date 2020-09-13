@@ -20,7 +20,7 @@ const Slider = () => {
 
   return (
     <div className="carousel-outer">
-      <Carousel infiniteLoop autoPlay="true" interval="5000" showStatus="false" swipeable="true" style={{ background: "none" }}>
+      <Carousel infiniteLoop autoPlay="true" interval="8000" swipeable="true">
           <div style={sliderStyle}> 
             <BookItem />
 
