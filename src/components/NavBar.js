@@ -21,12 +21,12 @@ const NavBar = () => {
             textAlign: "center"
         },
         notSelected: {
-            color: "#213c80",
-            border: 0,
-            margin: 5,
+            color: "white",
+            margin: 15,
             width: 125,
-            fontSize: 25,
-            textAlign: "center"
+            fontSize: 20,
+            textAlign: "center",
+            backgroundColor: "#213c80"
         }
         
     }
@@ -42,18 +42,18 @@ const NavBar = () => {
                     justify="center"
                 >
                     <Grid container md="6" justify="center">
-                        <Link to="/contact"><div onClick={() => setNavState({ page: "contact" })} style={buttonStyle.notSelected}>Contact</div></Link> 
-                        <Link to="/"><div onClick={() => setNavState({ page: "aboutMe" })} style={buttonStyle.notSelected}>Bio</div></Link>
+                        <Link style={{textDecoration: "none"}} to="/contact"><Button variant="contained" onClick={() => setNavState({ page: "contact" })} style={buttonStyle.notSelected}>Contact</Button></Link> 
+                        <Link style={{textDecoration: "none"}} to="/"><Button variant="contained" onClick={() => setNavState({ page: "aboutMe" })} style={buttonStyle.notSelected}>Bio</Button></Link>
                     </Grid>
             
                     <Grid container md="6" justify="center">
-                        <Link to="/movies"><div onClick={() => setNavState({ page: "movies" })} style={buttonStyle.notSelected}>Movies</div></Link>
-                        <Link to="/stories"><div onClick={() => setNavState({ page: "stories" })} style={buttonStyle.notSelected}>Stories</div></Link>
+                        <Link style={{textDecoration: "none"}} to="/movies"><Button variant="contained" onClick={() => setNavState({ page: "movies" })} style={buttonStyle.notSelected}>Movies</Button></Link>
+                        <Link style={{textDecoration: "none"}} to="/stories"><Button variant="contained" onClick={() => setNavState({ page: "stories" })} style={buttonStyle.notSelected}>Stories</Button></Link>
                         
                     </Grid>
                     <Grid>
                         <Grid item md="auto" sm="12">
-                            <Link style={{textDecoration: "none"}} to="/poetry"><div onClick={() => setNavState({ page: "poetry" })} style={buttonStyle.selected}>Poems</div></Link>
+                            <Link style={{textDecoration: "none"}} to="/poetry"><Button onClick={() => setNavState({ page: "poetry" })} style={buttonStyle.selected}>Poems</Button></Link>
                         </Grid>
                     </Grid>
                 </Grid>
@@ -69,17 +69,17 @@ const NavBar = () => {
                     justify="center"
                 >
                     <Grid container md="6" justify="center">
-                        <Link to="/"><div onClick={() => setNavState({ page: "aboutMe" })} style={buttonStyle.notSelected}>Bio</div></Link> 
-                        <Link to="/poetry"><div onClick={() => setNavState({ page: "poetry" })} style={buttonStyle.notSelected}>Poems</div></Link>
+                        <Link style={{textDecoration: "none"}} to="/"><Button variant="contained" onClick={() => setNavState({ page: "aboutMe" })} style={buttonStyle.notSelected}>Bio</Button></Link> 
+                        <Link style={{textDecoration: "none"}} to="/poetry"><Button variant="contained" onClick={() => setNavState({ page: "poetry" })} style={buttonStyle.notSelected}>Poems</Button></Link>
                     </Grid>
             
                     <Grid container md="6" justify="center">
-                        <Link to="/stories"><div onClick={() => setNavState({ page: "stories" })} style={buttonStyle.notSelected}>Stories</div></Link>
-                        <Link to="/contact"><div onClick={() => setNavState({ page: "contact" })} style={buttonStyle.notSelected}>Contact</div></Link>
+                        <Link style={{textDecoration: "none"}} to="/stories"><Button variant="contained" onClick={() => setNavState({ page: "stories" })} style={buttonStyle.notSelected}>Stories</Button></Link>
+                        <Link style={{textDecoration: "none"}} to="/contact"><Button variant="contained" onClick={() => setNavState({ page: "contact" })} style={buttonStyle.notSelected}>Contact</Button></Link>
                     </Grid>
                     <Grid>
                         <Grid item md="auto" sm="12">
-                            <Link style={{textDecoration: "none"}} to="/movies"><div onClick={() => setNavState({ page: "movies" })} style={buttonStyle.selected}>Movies</div></Link>
+                            <Link style={{textDecoration: "none"}} to="/movies"><Button onClick={() => setNavState({ page: "movies" })} style={buttonStyle.selected}>Movies</Button></Link>
                         </Grid>
                     </Grid>
                 </Grid>
@@ -95,17 +95,17 @@ const NavBar = () => {
                     justify="center"
                 >
                     <Grid container md="6" justify="center">
-                        <Link to="/poetry"><div onClick={() => setNavState({ page: "poetry" })} style={buttonStyle.notSelected}>Poems</div></Link>
-                        <Link to="/movies"><div onClick={() => setNavState({ page: "movies" })} style={buttonStyle.notSelected}>Movies</div></Link>
+                        <Link style={{textDecoration: "none"}} to="/poetry"><Button variant="contained" onClick={() => setNavState({ page: "poetry" })} style={buttonStyle.notSelected}>Poems</Button></Link>
+                        <Link style={{textDecoration: "none"}} to="/movies"><Button variant="contained" onClick={() => setNavState({ page: "movies" })} style={buttonStyle.notSelected}>Movies</Button></Link>
                     </Grid>
             
                     <Grid container md="6" justify="center">
-                        <Link to="/contact"><div onClick={() => setNavState({ page: "contact" })} style={buttonStyle.notSelected}>Contact</div></Link>
-                        <Link to="/"><div onClick={() => setNavState({ page: "aboutMe" })} style={buttonStyle.notSelected}>Bio</div></Link>
+                        <Link style={{textDecoration: "none"}} to="/contact"><Button variant="contained" onClick={() => setNavState({ page: "contact" })} style={buttonStyle.notSelected}>Contact</Button></Link>
+                        <Link style={{textDecoration: "none"}} to="/"><Button variant="contained" onClick={() => setNavState({ page: "aboutMe" })} style={buttonStyle.notSelected}>Bio</Button></Link>
                     </Grid>
                     <Grid>
                         <Grid item md="auto" sm="12">
-                            <Link style={{textDecoration: "none"}} to="/stories"><div onClick={() => setNavState({ page: "stories" })} style={buttonStyle.selected}>Stories</div></Link>
+                            <Link style={{textDecoration: "none"}} to="/stories"><Button onClick={() => setNavState({ page: "stories" })} style={buttonStyle.selected}>Stories</Button></Link>
                         </Grid>
                     </Grid>
                 </Grid>
@@ -121,19 +121,19 @@ const NavBar = () => {
                     justify="center"
                 >
                     <Grid container md="6" justify="center">
-                        <Link to="/movies"><div onClick={() => setNavState({ page: "movies" })} style={buttonStyle.notSelected}>Movies</div></Link>
-                        <Link to="/stories"><div onClick={() => setNavState({ page: "stories" })} style={buttonStyle.notSelected}>Stories</div></Link>
+                        <Link style={{textDecoration: "none"}} to="/movies"><Button variant="contained" onClick={() => setNavState({ page: "movies" })} style={buttonStyle.notSelected}>Movies</Button></Link>
+                        <Link style={{textDecoration: "none"}} to="/stories"><Button variant="contained" onClick={() => setNavState({ page: "stories" })} style={buttonStyle.notSelected}>Stories</Button></Link>
                     </Grid>
             
                     <Grid container md="6" justify="center">
                         
-                        <Link to="/"><div onClick={() => setNavState({ page: "aboutMe" })} style={buttonStyle.notSelected}>Bio</div></Link>
-                        <Link to="/poetry"><div onClick={() => setNavState({ page: "poetry" })} style={buttonStyle.notSelected}>Poems</div></Link>
+                        <Link style={{textDecoration: "none"}} to="/"><Button variant="contained" onClick={() => setNavState({ page: "aboutMe" })} style={buttonStyle.notSelected}>Bio</Button></Link>
+                        <Link style={{textDecoration: "none"}} to="/poetry"><Button variant="contained" onClick={() => setNavState({ page: "poetry" })} style={buttonStyle.notSelected}>Poems</Button></Link>
                         
                     </Grid>
                     <Grid>
                         <Grid item md="auto" sm="12">
-                            <Link style={{textDecoration: "none"}} to="/contact"><div onClick={() => setNavState({ page: "contact" })} style={buttonStyle.selected}>Contact</div></Link>
+                            <Link style={{textDecoration: "none"}} to="/contact"><Button onClick={() => setNavState({ page: "contact" })} style={buttonStyle.selected}>Contact</Button></Link>
                         </Grid>
                     </Grid>
                 </Grid>
@@ -148,19 +148,19 @@ const NavBar = () => {
                     justify="center"
                 >
                     <Grid container md="6" justify="center">
-                        <Link to="/stories"><div onClick={() => setNavState({ page: "stories" })} style={buttonStyle.notSelected}>Stories</div></Link>
-                        <Link to="/contact"><div onClick={() => setNavState({ page: "contact" })} style={buttonStyle.notSelected}>Contact</div></Link>
+                        <Link style={{textDecoration: "none"}} to="/stories"><Button variant="contained" onClick={() => setNavState({ page: "stories" })} style={buttonStyle.notSelected}>Stories</Button></Link>
+                        <Link style={{textDecoration: "none"}} to="/contact"><Button variant="contained" onClick={() => setNavState({ page: "contact" })} style={buttonStyle.notSelected}>Contact</Button></Link>
                         
                     </Grid>
             
                     <Grid container md="6" justify="center">
-                        <Link to="/poetry"><div onClick={() => setNavState({ page: "poetry" })} style={buttonStyle.notSelected}>Poems</div></Link>
-                        <Link to="/movies"><div onClick={() => setNavState({ page: "movies" })} style={buttonStyle.notSelected}>Movies</div></Link>
+                        <Link style={{textDecoration: "none"}} to="/poetry"><Button variant="contained" onClick={() => setNavState({ page: "poetry" })} style={buttonStyle.notSelected}>Poems</Button></Link>
+                        <Link style={{textDecoration: "none"}} to="/movies"><Button variant="contained" onClick={() => setNavState({ page: "movies" })} style={buttonStyle.notSelected}>Movies</Button></Link>
                         
                     </Grid>
                     <Grid>
                         <Grid item md="auto" sm="12">
-                            <Link style={{textDecoration: "none"}} to="/"><div onClick={() => setNavState({ page: "aboutMe" })} style={buttonStyle.selected}>Bio</div></Link>
+                            <Link style={{textDecoration: "none"}} to="/"><Button onClick={() => setNavState({ page: "aboutMe" })} style={buttonStyle.selected}>Bio</Button></Link>
                         </Grid>
                     </Grid>
                 </Grid>
