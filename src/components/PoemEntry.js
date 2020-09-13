@@ -33,7 +33,7 @@ const PoemEntry = (props) => {
     return (
         <div>
             <button style={stylePoemEntry.button} onClick={()=> setPoemState({ showPoem: true })}>{props.title}</button>
-            <p style={stylePoemEntry.date}> Date Posted: {props.date} </p>
+            <p style={stylePoemEntry.date}> Date: {props.date} </p>
             <p style={stylePoemEntry.date}> Additional Info: {props.info} </p>
         </div>
     )
@@ -44,7 +44,7 @@ const PoemEntry = (props) => {
             <p style={stylePoemEntry.text}>
                 {props.text}
             </p>
-            <p style={stylePoemEntry.date}> Date Posted: {props.date} </p>
+            <p style={stylePoemEntry.date}> Date: {props.date} </p>
             <p style={stylePoemEntry.date}> Additional Info: {props.info} </p>
         </div>
     )

@@ -8,7 +8,7 @@ const ContactPage = () => {
             <Grid container direction="row">
                 <Grid item md="12" sm="12">
                 
-                    <h3>Contact</h3>
+                    {/* <h3>Contact</h3> */}
                 </Grid>
                 <Grid item md="12" sm="12">
                     <h5>Contact Andrew Rueter</h5>

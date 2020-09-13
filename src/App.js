@@ -10,7 +10,8 @@ import Stories from "./components/pages/Stories"
 import Contact from "./components/pages/Contact"
 
 import Header from "./components/Header"
-import Slider from "./components/Slider"
+import NavBar from "./components/NavBar"
+import Slider from "./components/SliderComp/Slider"
 
 
 const App = () => {
@@ -22,17 +23,23 @@ const App = () => {
   return (
     <Router>
       <Container>
-        <Header />
         <Grid container>
-          <Grid item md="8" sm="12" style={bodyStyle}>
+          <Grid item md="7" sm="12">
+            <Header />
+          </Grid>
+          <Grid item md="5" sm="12">
+            <Slider />
+          </Grid>
+          <Grid item md="12" sm="12">
+            <NavBar />
             <Route exact path="/" component={AboutPage} />
             <Route path="/poetry" component={Poetry} />
             <Route path="/movies" component={Movies} />
             <Route path="/stories" component={Stories} />
             <Route path="/contact" component={Contact} />
           </Grid>
-          <Grid item md="3" sm="12">
-            <Slider />
+          <Grid item md="3" style={{marginTop: 200}} sm="12">
+          
           </Grid>
         </Grid>
       </Container>

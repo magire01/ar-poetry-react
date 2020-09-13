@@ -28,7 +28,7 @@ const AboutPage = () => {
         <Box>
             <Grid container direction="row">
                 
-                <h3 style={textStyle.subtitle1}>About Me</h3>
+                {/* <h3 style={textStyle.subtitle1}>About Me</h3> */}
                 <p style={textStyle.text}> Test about me test about me test about me test about me test about me test about me test about me test about me test about me test  me test about me test about me test aboutabout </p>
                 <p style={textStyle.text}> Test about me test about me test about me test about me test about me test about me test about me test about me test about me test  me test about me test about me test aboutabout </p>
                

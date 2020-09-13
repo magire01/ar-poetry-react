@@ -193,7 +193,7 @@ const PoetryPage = () => {
         <Box>
             <Grid container direction="row">
                 <Grid item md="12" sm="12">
-                    <h3 style={stylePoems.header}>Poetry</h3>
+                    {/* <h3 style={stylePoems.header}>Poetry</h3> */}
                 </Grid>
                
                 <Grid item md="12" sm="12">

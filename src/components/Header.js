@@ -1,7 +1,7 @@
 import React from "react";
 import { Grid } from "@material-ui/core/";
 
-import NavBar from "./NavBar"
+
 
 const Header = () => {
 
@@ -11,7 +11,8 @@ const Header = () => {
         padding: 0,
         marginBottom: 0,
         textAlign: "center",
-        fontFamily: "Merienda"
+        fontFamily: "Merienda",
+        textAlign: "center"
     }
 
     const header2Style = {
@@ -39,21 +40,6 @@ const Header = () => {
                 <h1 style={headerStyle}>Andrew Rueter</h1>
                 <h1 style={header2Style}>Poetry</h1>
             </Grid>
-            {/* <Grid
-                item
-                spacing={1}
-                md="8"
-            >
-                
-            </Grid>  */}
-            <Grid
-                item
-                spacing={1}
-                md="7"
-            >
-                <NavBar />
-            </Grid> 
-            
 
         </Grid>
     )
