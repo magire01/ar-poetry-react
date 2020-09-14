@@ -37,8 +37,10 @@ const Header = () => {
                 spacing={1}
                 md="5"
             >
+                
                 <h1 style={headerStyle}>Andrew Rueter</h1>
                 <h1 style={header2Style}>Poetry</h1>
+               
             </Grid>
 
         </Grid>

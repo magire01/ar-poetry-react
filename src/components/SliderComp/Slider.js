@@ -13,7 +13,7 @@ const Slider = () => {
 
   const sliderStyle = {
     height: 250,
-    width: "auto",
+    width: 60,
   }
 
   
