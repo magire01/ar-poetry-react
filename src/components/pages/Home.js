@@ -1,15 +1,36 @@
 import React from "react";
 import { Box, Grid, Paper } from "@material-ui/core/";
 
-import StoriesHeader from "../PageHeaders/StoriesHeader"
+import HomeHeader from "../PageHeaders/HomeHeader"
 
-const StoriesPage = () => {
+const HomePage = () => {
+
+    const divMargins = {
+        padding: 20
+    }
+
+    const textStyle = {
+        subtitle1: {
+            color: "#213c80",
+            textAlign: "center",
+            fontSize: 30
+        },
+        subtitle2: {
+            color: "black",
+            textAlign: "center",
+            fontSize: 20
+        },
+        text: {
+            color: "black",
+            fontSize: 20
+        }
+    }
     
     return (
         <Box>
             <Grid container direction="row">
                 <Grid item md="12" sm="12">
-                    <StoriesHeader />
+                    <HomeHeader />
                 </Grid>
                 
                 <Grid item md="12" sm="12">
@@ -22,4 +43,4 @@ const StoriesPage = () => {
     )
 }
 
-export default StoriesPage;
+export default HomePage;

@@ -3,23 +3,32 @@ import { BrowserRouter as Router, Route, Link } from "react-router-dom"
 import './App.css';
 import { Container, Grid, Paper } from '@material-ui/core/'
 
-import AboutPage from "./components/pages/About"
+import Home from "./components/pages/Home"
 import Poetry from "./components/pages/Poetry"
 import Movies from "./components/pages/Movies"
 import Stories from "./components/pages/Stories"
 import Contact from "./components/pages/Contact"
 
 import Header from "./components/Header"
-import NavBar from "./components/NavBar"
 import Slider from "./components/SliderComp/Slider"
 
 
 const App = () => {
 
-  const bodyStyle = {
-    slider: {
-      marginTop: 30
-    } 
+  const mainStyle = {
+    layout: {
+      marginBottom: 20,
+      display: "block",
+      justifyContent: "center"
+    },
+    header: {
+      marginBottom: 80,
+      display: "block",
+      justifyContent: "center"
+    },
+    content: {
+      marginRight: 20,
+    }
      
   }
 
@@ -29,23 +38,24 @@ const App = () => {
 
         <Grid container>
           
-          <Grid item md="7" sm="12">
-            <Header />
-          </Grid>
-          <Grid item md="5" sm="12" style={bodyStyle.slider}>
-              <Slider />
+          <Grid item md="12" xs="12" style={mainStyle.header}>
+            <Paper>
+              <Header />
+            </Paper>
           </Grid>
           
-          <Grid item md="12" sm="12">
-        
-            <NavBar />
-          
-            <Route exact path="/" component={AboutPage} />
+          <Grid item md="8" sm="12" style={mainStyle.content}>
+            <Route exact path="/" component={Home} />
             <Route path="/poetry" component={Poetry} />
             <Route path="/movies" component={Movies} />
             <Route path="/stories" component={Stories} />
             <Route path="/contact" component={Contact} />
-          
+          </Grid>
+
+          <Grid item md="3" sm="12" style={mainStyle.layout}>
+            <Paper>
+              <Slider />
+            </Paper>
           </Grid>
         </Grid>
       

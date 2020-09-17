@@ -1,7 +1,9 @@
 import React from "react";
-import { Box, Grid } from "@material-ui/core/";
+import { Box, Grid, Paper } from "@material-ui/core/";
 // import Obj from "../../utilities/poems.json"
 import nl2br from "react-newline-to-break";
+
+import PoetryHeader from "../PageHeaders/PoetryHeader"
 
 import PoemButton from "../PoemEntry"
 
@@ -192,17 +194,21 @@ const PoetryPage = () => {
     return (
         <Box>
             <Grid container direction="row">
+                
                 <Grid item md="12" sm="12">
-                    {/* <h3 style={stylePoems.header}>Poetry</h3> */}
+                    <PoetryHeader />
                 </Grid>
-               
+                
                 <Grid item md="12" sm="12">
-                    {poemData.data.map(( data, index ) => (
-                        <div style={stylePoems.poemEntry}>
-                            <PoemButton title={data.title} text={nl2br(data.text)} date={data.datePosted} info={data.addInfo} />
-                        </div>
-                    ))}
+                    <Paper variant="outlined" elevation="3">
+                        {poemData.data.map(( data, index ) => (
+                            <div style={stylePoems.poemEntry}>
+                                <PoemButton title={data.title} text={nl2br(data.text)} date={data.datePosted} info={data.addInfo} />
+                            </div>
+                        ))}
+                    </Paper>
                 </Grid>
+                
                 
             </Grid>
         </Box>
