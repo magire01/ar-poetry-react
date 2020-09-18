@@ -67,9 +67,6 @@ const Header = () => {
                         <Grid item md="auto">
                             <Link style={(navPage.page === "Stories") ? styleNav.active : styleNav.link} to="/stories" onClick={() => setNavPage({ page: "Stories" })}><Typography>Stories</Typography></Link>
                         </Grid>
-                        <Grid item md="auto">
-                            <Link style={(navPage.page === "Contact") ? styleNav.active : styleNav.link} to="/contact" onClick={() => setNavPage({ page: "Contact" })}><Typography>Contact</Typography></Link>
-                        </Grid>
                     </Grid>
                 </Grid>
             </AppBar>

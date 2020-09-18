@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route, Link } from "react-router-dom"
 import './App.css';
 import { Container, Grid, Paper } from '@material-ui/core/'
 
-import Home from "./components/pages/Home"
+import Home from "./components/pages/HomePage/Home"
 import Poetry from "./components/pages/Poetry"
 import Movies from "./components/pages/Movies"
 import Stories from "./components/pages/Stories"
@@ -39,7 +39,7 @@ const App = () => {
         <Grid container>
           
           <Grid item md="12" xs="12" style={mainStyle.header}>
-            <Paper>
+            <Paper elevation="3">
               <Header />
             </Paper>
           </Grid>
@@ -53,7 +53,7 @@ const App = () => {
           </Grid>
 
           <Grid item md="3" sm="12" style={mainStyle.layout}>
-            <Paper>
+            <Paper elevation="3">
               <Slider />
             </Paper>
           </Grid>
