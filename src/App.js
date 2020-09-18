@@ -41,7 +41,7 @@ const App = () => {
 
         <Grid container>
           
-          <Grid item md="12" xs="12" style={mainStyle.header}>
+          <Grid item md="12" xs="12" style={mainStyle.header} >
             <Paper elevation="3">
               <Header />
             </Paper>
