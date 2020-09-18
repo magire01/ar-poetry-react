@@ -1,5 +1,7 @@
 import React from "react";
-import { Box, Grid } from "@material-ui/core/";
+import { Box, Grid, Paper } from "@material-ui/core/";
+
+import ContactHeader from "../PageHeaders/ContactHeader"
 
 const ContactPage = () => {
     
@@ -7,10 +9,11 @@ const ContactPage = () => {
         <Box>
             <Grid container direction="row">
                 <Grid item md="12" sm="12">
-                
-                    {/* <h3>Contact</h3> */}
+                    <ContactHeader />
                 </Grid>
+                
                 <Grid item md="12" sm="12">
+                    <Paper variant="outlined" elevation="3">
                     <h5>Contact Andrew Rueter</h5>
 
                     <form>
@@ -23,8 +26,8 @@ const ContactPage = () => {
                         <p></p>
                         <button>Submit</button>
                     </form>
+                    </Paper>
                 </Grid>
-                    
             </Grid>
         </Box>
     )
