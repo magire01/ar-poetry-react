@@ -7,7 +7,7 @@ const PatreonSection = () => {
 
         <Grid container>
             <Typography>
-                This is the Contact Section
+                This is the Patreon Section
             </Typography>
         </Grid>
     )
