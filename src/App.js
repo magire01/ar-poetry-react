@@ -16,10 +16,13 @@ import Slider from "./components/SliderComp/Slider"
 const App = () => {
 
   const mainStyle = {
-    layout: {
+    carousel: {
       marginBottom: 20,
+      marginTop: 20,
       display: "block",
-      justifyContent: "center"
+      justifyContent: "center",
+      width: "100%",
+      height: "auto"
     },
     header: {
       marginBottom: 80,
@@ -51,7 +54,7 @@ const App = () => {
             <Route path="/stories" component={Stories} />
           </Grid>
 
-          <Grid item md="3" sm="12" style={mainStyle.layout}>
+          <Grid item md="3" sm="12" style={mainStyle.carousel}>
             <Paper elevation="3">
               <Slider />
             </Paper>
