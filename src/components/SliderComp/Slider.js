@@ -12,8 +12,8 @@ import FeaturedReviews from "./SliderItems/FeaturedReviews"
 const Slider = () => {
 
   const sliderStyle = {
-    height: 250,
-    width: 60,
+    height: "auto",
+    width: "auto",
   }
 
   

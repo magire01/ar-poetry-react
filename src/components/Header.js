@@ -14,7 +14,7 @@ const Header = () => {
     const styleNav = {
         body: {
             flexGrow: 1,
-            backgroundColor: "black"
+            backgroundColor: "black",
         },
         title: {
             fontSize: 30,
@@ -23,8 +23,10 @@ const Header = () => {
         },
         linkDiv: {
             display: "flex",
-            justifyContent: "center",
-            paddingTop: 10
+            alignContent: "center",
+            justify: "center",
+            paddingTop: 10,
+            marginLeft: 5
         },
         link: {
             textDecoration: "none",
@@ -43,18 +45,16 @@ const Header = () => {
             container
             spacing={1}
             direction="row"
-            alignItems="center"
-            justify="center"
             
         >
         <div>
             <AppBar position="absolute" style={styleNav.body}>
                 <Grid container>
-                    <Grid container md="5" xs="12">
-                        <Typography style={styleNav.title}> Andrew Rueter <span style={{color: "red"}}>Poetry</span></Typography>
+                    <Grid container md="5" xs="12" alignContent="center" justify="center">
+                        <Link style={{ textDecoration: "none", color: "white" }} to="/"><Typography onClick={() => setNavPage({ page: "Home" })} style={styleNav.title}> Andrew Rueter <span style={{ color: "red", marginLeft: 7 }}>Poetry</span></Typography></Link>
                     </Grid>
 
-                    <Grid container md="7" xs="12" spacing="5" style ={styleNav.linkDiv}>
+                    <Grid container md="7" xs="12" spacing="5" style ={styleNav.linkDiv} alignContent="center" justify="center">
                         <Grid item md="auto">
                             <Link style={(navPage.page === "Home") ? styleNav.active : styleNav.link} to="/" onClick={() => setNavPage({ page: "Home" })}><Typography>Home</Typography></Link>  
                         </Grid>

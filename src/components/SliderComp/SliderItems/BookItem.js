@@ -1,19 +1,33 @@
 import React from "react";
 
-import { Grid, Button } from "@material-ui/core/";
+import { Grid, Button, Typography } from "@material-ui/core/";
 
 const BookItem = () => {
 
+    const slideStyle = {
+        body: {
+            margin: 0
+        },
+        image: {
+            width: 200, 
+            height: "auto",
+            marginTop: 15,
+            marginBottom: 15,
+        }
+    }
     
     return (
-        <Grid container direction="row">
-            <Grid item md="4" >
-                <h5> Icy </h5>
-                <h6> By Andrew Rueter </h6>
-                <button>Amazon Link</button>
+        <Grid container style={slideStyle.body}>
+            
+            <Grid item md="12" xs="12" display="flex" alignContent="center" justifyContent="center" >
+                <img src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1564897841l/50894622._SX0_SY0_.jpg" style={slideStyle.image} />
             </Grid>
-            <Grid item md="8" >
-                <img src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1564897841l/50894622._SX0_SY0_.jpg" style={{width: 200, height: "auto"}} />
+
+            <Grid item md="12" xs="12" >
+
+                <Typography variant="h5">Icy</Typography>
+                <Typography variant="h6">by Andrew Rueter</Typography>
+                <Button variant="outlined" color="secondary">Amazon Link</Button>
             </Grid>
         </Grid>
     )
