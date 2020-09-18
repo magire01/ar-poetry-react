@@ -4,10 +4,10 @@ import './App.css';
 import { Container, Grid, Paper } from '@material-ui/core/'
 
 import Home from "./components/pages/HomePage/Home"
-import Poetry from "./components/pages/Poetry"
-import Movies from "./components/pages/Movies"
-import Stories from "./components/pages/Stories"
-import Contact from "./components/pages/Contact"
+import Poetry from "./components/pages/PoetryPage/Poetry"
+import Movies from "./components/pages/MoviesPage/Movies"
+import Stories from "./components/pages/StoriesPage/Stories"
+
 
 import Header from "./components/Header"
 import Slider from "./components/SliderComp/Slider"
@@ -49,7 +49,6 @@ const App = () => {
             <Route path="/poetry" component={Poetry} />
             <Route path="/movies" component={Movies} />
             <Route path="/stories" component={Stories} />
-            <Route path="/contact" component={Contact} />
           </Grid>
 
           <Grid item md="3" sm="12" style={mainStyle.layout}>

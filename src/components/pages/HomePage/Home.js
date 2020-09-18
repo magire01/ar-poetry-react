@@ -2,43 +2,94 @@ import React, { useState } from "react";
 import { Box, Grid, Button, Paper } from "@material-ui/core/";
 import 'fontsource-roboto';
 import Typography from '@material-ui/core/Typography';
-import HomeHeader from "./HomeHeader"
 
-import HomeDisplay from "./HomeDisplay";
-
+import BioSection from "./HomeContent/Bio";
+import PublishedSection from "./HomeContent/Published";
+import PatreonSection from "./HomeContent/Patreon";
+import ContactSection from "./HomeContent/Contact";
 
 const HomePage = () => {
+    const divMargins = {
+            padding: 20
+        }
+
+        const textStyle = {
+            subtitle1: {
+                color: "#213c80",
+                textAlign: "center",
+                fontSize: 30
+            },
+            subtitle2: {
+                color: "black",
+                textAlign: "center",
+                fontSize: 20
+            },
+            text: {
+                color: "black",
+                fontSize: 20
+            }
+        }
 
     const [subNav, setSubNav] = useState({
-        section: "all"
+        section: "All"
     });
 
-    const divMargins = {
-        padding: 20
-    }
+    const homeDisplay = () => {
+        switch(subNav.section) {
+            case "Bio":
+                return (
+                    <div>
+                        <BioSection />
+                        <PublishedSection />
+                        <PatreonSection />
+                        <ContactSection />
+                    </div>
+                );
+            case "Published":
+                return (
+                    <div>
+                        <PublishedSection />
+                        <PatreonSection />
+                        <ContactSection />
+                        <BioSection />
 
-    const textStyle = {
-        subtitle1: {
-            color: "#213c80",
-            textAlign: "center",
-            fontSize: 30
-        },
-        subtitle2: {
-            color: "black",
-            textAlign: "center",
-            fontSize: 20
-        },
-        text: {
-            color: "black",
-            fontSize: 20
+                    </div>
+                );
+            case "Patreon":
+                return (
+                    <div>
+                        <PatreonSection />
+                        <ContactSection />
+                        <BioSection />
+                        <PublishedSection />
+                        <PatreonSection />
+                    </div>
+                );
+            case "Contact":
+                return (
+                    <div>
+                        <ContactSection />
+                        <BioSection />
+                        <PublishedSection />
+                    </div>
+                );
+            default:
+                return (
+                    <div>
+                        <BioSection />
+                        <PublishedSection />
+                        <PatreonSection />
+                        <ContactSection />
+                    </div>
+                );
         }
     }
-    
+
     return (
         <Box>
             <Grid container direction="row">
                 <Grid container justify="center" md="12" sm="12">
-                    <Typography variant="h4" onClick={() => setSubNav({ section: "all" })}>Home</Typography>
+                    <Typography variant="h4" onClick={() => setSubNav({ section: "All" })}>Home</Typography>
                 </Grid>
         
                 <Grid container md="12" sm="12" justify="center" spacing="3">
@@ -58,7 +109,10 @@ const HomePage = () => {
 
                 <Grid item md="12" sm="12">
                     <Paper elevation="3">
-                        <HomeDisplay section={subNav.section} />
+                        <div>
+                            {homeDisplay()}
+                        </div>
+                        
                     </Paper>
                 </Grid>
             </Grid>

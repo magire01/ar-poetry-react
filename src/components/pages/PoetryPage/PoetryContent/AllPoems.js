@@ -1,13 +1,10 @@
 import React from "react";
-import { Box, Grid, Paper } from "@material-ui/core/";
-// import Obj from "../../utilities/poems.json"
+import { Grid, Typography } from "@material-ui/core/";
 import nl2br from "react-newline-to-break";
 
-import PoetryHeader from "../PageHeaders/PoetryHeader"
+import PoemEntry from "../PoemEntry"
 
-import PoemButton from "../PoemEntry"
-
-const PoetryPage = () => {
+const AllPoems = () => {
 
     const poemData = {
         data: [
@@ -190,29 +187,21 @@ const PoetryPage = () => {
             marginTop: 5
         }
     }
-    
+
     return (
-        <Box>
-            <Grid container direction="row">
-                
+
+        <Grid container>
+            <Typography>
                 <Grid item md="12" sm="12">
-                    <PoetryHeader />
+                    {poemData.data.map(( data, index ) => (
+                        <div style={stylePoems.poemEntry}>
+                            <PoemEntry title={data.title} text={nl2br(data.text)} date={data.datePosted} info={data.addInfo} />
+                        </div>
+                    ))}
                 </Grid>
-                
-                <Grid item md="12" sm="12">
-                    <Paper variant="outlined" elevation="3">
-                        {poemData.data.map(( data, index ) => (
-                            <div style={stylePoems.poemEntry}>
-                                <PoemButton title={data.title} text={nl2br(data.text)} date={data.datePosted} info={data.addInfo} />
-                            </div>
-                        ))}
-                    </Paper>
-                </Grid>
-                
-                
-            </Grid>
-        </Box>
+            </Typography>
+        </Grid>
     )
 }
 
-export default PoetryPage;
+export default AllPoems;
