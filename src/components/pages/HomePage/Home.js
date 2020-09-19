@@ -12,23 +12,28 @@ const HomePage = () => {
     const divMargins = {
             padding: 20
         }
-
-        const textStyle = {
-            subtitle1: {
-                color: "#213c80",
-                textAlign: "center",
-                fontSize: 30
-            },
-            subtitle2: {
-                color: "black",
-                textAlign: "center",
-                fontSize: 20
-            },
-            text: {
-                color: "black",
-                fontSize: 20
-            }
+    
+    const pageStyle = {
+        body: {
+            paddingLeft: 25,
+            paddingRight: 25,
+            paddingTop: 15,
+            paddingBottom: 15,
+            width: "100%"
         }
+    }
+
+    const textStyle = {
+        header: {
+            color: "black"
+        },
+        subHeader: {
+            color: "black"
+        },
+        subHeaderActive: {
+            color: "red"
+        }
+    }
 
     const [subNav, setSubNav] = useState({
         section: "All"
@@ -52,7 +57,6 @@ const HomePage = () => {
                         <PatreonSection />
                         <ContactSection />
                         <BioSection />
-
                     </div>
                 );
             case "Patreon":
@@ -62,7 +66,6 @@ const HomePage = () => {
                         <ContactSection />
                         <BioSection />
                         <PublishedSection />
-                        <PatreonSection />
                     </div>
                 );
             case "Contact":
@@ -71,6 +74,7 @@ const HomePage = () => {
                         <ContactSection />
                         <BioSection />
                         <PublishedSection />
+                        <PatreonSection />
                     </div>
                 );
             default:
@@ -89,27 +93,27 @@ const HomePage = () => {
         <Box>
             <Grid container direction="row">
                 <Grid container justify="center" md="12" sm="12">
-                    <Typography variant="h4" onClick={() => setSubNav({ section: "All" })}>Home</Typography>
+                    <Typography variant="h4" style={textStyle.header} onClick={() => setSubNav({ section: "All" })}>Home</Typography>
                 </Grid>
         
                 <Grid container md="12" sm="12" justify="center" spacing="3">
                     <Grid item md="auto">
-                        <Button onClick={() => setSubNav({ section: "Bio" })}><Typography>Bio</Typography></Button>
+                        <Button onClick={() => setSubNav({ section: "Bio" })} style={(subNav.section === "Bio" ? textStyle.subHeaderActive : textStyle.subHeader)}><Typography>Bio</Typography></Button>
                     </Grid>
                     <Grid item md="auto">
-                        <Button onClick={() => setSubNav({ section: "Published" })}><Typography>Published</Typography></Button>
+                        <Button onClick={() => setSubNav({ section: "Published" })} style={(subNav.section === "Published" ? textStyle.subHeaderActive : textStyle.subHeader)}><Typography>Published</Typography></Button>
                     </Grid>
                     <Grid item md="auto">
-                        <Button onClick={() => setSubNav({ section: "Patreon" })}><Typography>Patreon</Typography></Button>
+                        <Button onClick={() => setSubNav({ section: "Patreon" })} style={(subNav.section === "Patreon" ? textStyle.subHeaderActive : textStyle.subHeader)}><Typography>Patreon</Typography></Button>
                     </Grid>
                     <Grid item md="auto">
-                        <Button onClick={() => setSubNav({ section: "Contact" })}><Typography>Contact</Typography></Button>
+                        <Button onClick={() => setSubNav({ section: "Contact" })} style={(subNav.section === "Contact" ? textStyle.subHeaderActive : textStyle.subHeader)}><Typography>Contact</Typography></Button>
                     </Grid>
                 </Grid>
 
-                <Grid item md="12" sm="12">
+                <Grid item md="12" sm="12" style={{ width: "100%" }}>
                     <Paper elevation="3">
-                        <div>
+                        <div style={pageStyle.body}>
                             {homeDisplay()}
                         </div>
                         

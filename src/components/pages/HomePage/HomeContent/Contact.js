@@ -5,7 +5,7 @@ const ContactSection = () => {
 
     return (
 
-        <Grid container>
+        <Grid container style={{ marginTop: "5%" }}>
             <Typography>
             <h5>Contact Andrew Rueter</h5>
 

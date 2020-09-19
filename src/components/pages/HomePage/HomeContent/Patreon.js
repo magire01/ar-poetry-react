@@ -5,7 +5,7 @@ const PatreonSection = () => {
 
     return (
 
-        <Grid container>
+        <Grid container style={{ marginTop: "5%" }}>
             <Typography>
                 This is the Patreon Section
             </Typography>
