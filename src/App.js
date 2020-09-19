@@ -22,7 +22,9 @@ const App = () => {
       display: "block",
       justifyContent: "center",
       width: "100%",
-      height: "auto"
+      height: "auto",
+      marginLeft: 5,
+      marginRight: 5
     },
     header: {
       marginBottom: 80,
@@ -30,7 +32,12 @@ const App = () => {
       justifyContent: "center"
     },
     content: {
-      marginRight: 20,
+      marginLeft: 5,
+      marginRight: 5,
+      display: "block",
+      justifyContent: "center",
+      width: "100%",
+      height: "auto"
     }
      
   }
