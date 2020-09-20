@@ -15,8 +15,8 @@ const HomePage = () => {
     
     const pageStyle = {
         body: {
-            paddingLeft: 25,
-            paddingRight: 25,
+            paddingLeft: 15,
+            paddingRight: 15,
             paddingTop: 15,
             paddingBottom: 15,
             width: "100%"
