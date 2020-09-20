@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/ar-poetry-react/precache-manifest.c1f1daf4325adc936a0e9924890d4b12.js"
+  "/ar-poetry-react/precache-manifest.e2b649253fca753d1d2a743cf63dbef6.js"
 );
 
 self.addEventListener('message', (event) => {

@@ -1,26 +1,26 @@
 {
   "files": {
-    "main.css": "/ar-poetry-react/static/css/main.24da1084.chunk.css",
-    "main.js": "/ar-poetry-react/static/js/main.011997d4.chunk.js",
-    "main.js.map": "/ar-poetry-react/static/js/main.011997d4.chunk.js.map",
+    "main.css": "/ar-poetry-react/static/css/main.967bc7c6.chunk.css",
+    "main.js": "/ar-poetry-react/static/js/main.5d93f956.chunk.js",
+    "main.js.map": "/ar-poetry-react/static/js/main.5d93f956.chunk.js.map",
     "runtime-main.js": "/ar-poetry-react/static/js/runtime-main.926be8c0.js",
     "runtime-main.js.map": "/ar-poetry-react/static/js/runtime-main.926be8c0.js.map",
-    "static/css/2.fb346933.chunk.css": "/ar-poetry-react/static/css/2.fb346933.chunk.css",
-    "static/js/2.6e67f423.chunk.js": "/ar-poetry-react/static/js/2.6e67f423.chunk.js",
-    "static/js/2.6e67f423.chunk.js.map": "/ar-poetry-react/static/js/2.6e67f423.chunk.js.map",
+    "static/css/2.0b4c839d.chunk.css": "/ar-poetry-react/static/css/2.0b4c839d.chunk.css",
+    "static/js/2.e97c2aeb.chunk.js": "/ar-poetry-react/static/js/2.e97c2aeb.chunk.js",
+    "static/js/2.e97c2aeb.chunk.js.map": "/ar-poetry-react/static/js/2.e97c2aeb.chunk.js.map",
     "index.html": "/ar-poetry-react/index.html",
-    "precache-manifest.c1f1daf4325adc936a0e9924890d4b12.js": "/ar-poetry-react/precache-manifest.c1f1daf4325adc936a0e9924890d4b12.js",
+    "precache-manifest.e2b649253fca753d1d2a743cf63dbef6.js": "/ar-poetry-react/precache-manifest.e2b649253fca753d1d2a743cf63dbef6.js",
     "service-worker.js": "/ar-poetry-react/service-worker.js",
-    "static/css/2.fb346933.chunk.css.map": "/ar-poetry-react/static/css/2.fb346933.chunk.css.map",
-    "static/css/main.24da1084.chunk.css.map": "/ar-poetry-react/static/css/main.24da1084.chunk.css.map",
-    "static/js/2.6e67f423.chunk.js.LICENSE.txt": "/ar-poetry-react/static/js/2.6e67f423.chunk.js.LICENSE.txt",
-    "static/media/App.css": "/ar-poetry-react/static/media/backgroundImage2.a8801c18.jpg"
+    "static/css/2.0b4c839d.chunk.css.map": "/ar-poetry-react/static/css/2.0b4c839d.chunk.css.map",
+    "static/css/main.967bc7c6.chunk.css.map": "/ar-poetry-react/static/css/main.967bc7c6.chunk.css.map",
+    "static/js/2.e97c2aeb.chunk.js.LICENSE.txt": "/ar-poetry-react/static/js/2.e97c2aeb.chunk.js.LICENSE.txt",
+    "static/media/index.css": "/ar-poetry-react/static/media/roboto-vietnamese-400-normal.a8be5b46.woff2"
   },
   "entrypoints": [
     "static/js/runtime-main.926be8c0.js",
-    "static/css/2.fb346933.chunk.css",
-    "static/js/2.6e67f423.chunk.js",
-    "static/css/main.24da1084.chunk.css",
-    "static/js/main.011997d4.chunk.js"
+    "static/css/2.0b4c839d.chunk.css",
+    "static/js/2.e97c2aeb.chunk.js",
+    "static/css/main.967bc7c6.chunk.css",
+    "static/js/main.5d93f956.chunk.js"
   ]
 }
