@@ -5,13 +5,22 @@ import AllStories from "./StoriesContent/AllStories"
 import FeaturedStories from "./StoriesContent/FeaturedStories"
 import SearchStories from "./StoriesContent/SearchStories"
 
-const MoviesPage = () => {
+const StoriesPage = () => {
 
     const [subNav, setSubNav] = useState({
-        section: "AllMovies"
+        section: "AllStories"
     });
 
-    const movieDisplay = () => {
+    const styleLink = {
+        active: {
+            color: "red"
+        },
+        inactive: {
+            color: "black"
+        }
+    }
+
+    const storyDisplay = () => {
         switch(subNav.section) {
             case "Featured":
                 return (
@@ -45,20 +54,26 @@ const MoviesPage = () => {
 
                 <Grid container md="12" sm="12" justify="center" spacing="3">
                     <Grid item md="auto">
-                        <Button onClick={() => setSubNav({ section: "AllStories" })}><Typography>All</Typography></Button>
+                        <Button 
+                            onClick={() => setSubNav({ section: "AllStories" })}
+                            style={(subNav.section === "AllStories") ? styleLink.active : styleLink.inactive}><Typography>All</Typography></Button>
                     </Grid>
                     <Grid item md="auto">
-                        <Button onClick={() => setSubNav({ section: "Featured" })}><Typography>Featured</Typography></Button>
+                        <Button 
+                            onClick={() => setSubNav({ section: "Featured" })}
+                            style={(subNav.section === "Featured") ? styleLink.active : styleLink.inactive}><Typography>Featured</Typography></Button>
                     </Grid>
                     <Grid item md="auto">
-                        <Button onClick={() => setSubNav({ section: "Search" })}><Typography>Search</Typography></Button>
+                        <Button 
+                            onClick={() => setSubNav({ section: "Search" })}
+                            style={(subNav.section === "Search") ? styleLink.active : styleLink.inactive}><Typography>Search</Typography></Button>
                     </Grid>
                 </Grid>
 
                 <Grid item md="12" sm="12">
                     <Paper elevation="3">
                         <div>
-                            {movieDisplay()}
+                            {storyDisplay()}
                         </div>
                         
                     </Paper>
@@ -72,4 +87,4 @@ const MoviesPage = () => {
     )
 }
 
-export default MoviesPage;
+export default StoriesPage;

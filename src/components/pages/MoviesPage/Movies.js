@@ -11,6 +11,15 @@ const MoviesPage = () => {
         section: "AllMovies"
     });
 
+    const styleLink = {
+        active: {
+            color: "red"
+        },
+        inactive: {
+            color: "black"
+        }
+    }
+
     const movieDisplay = () => {
         switch(subNav.section) {
             case "Featured":
@@ -40,18 +49,24 @@ const MoviesPage = () => {
             <Grid container direction="row">
                 
                 <Grid container justify="center" md="12" sm="12">
-                    <Typography variant="h4" onClick={() => setSubNav({ section: "All" })}>Movies</Typography>
+                    <Typography variant="h4" onClick={() => setSubNav({ section: "AllMovies" })}>Movies</Typography>
                 </Grid>
 
                 <Grid container md="12" sm="12" justify="center" spacing="3">
                     <Grid item md="auto">
-                        <Button onClick={() => setSubNav({ section: "AllMovies" })}><Typography>All</Typography></Button>
+                        <Button 
+                            onClick={() => setSubNav({ section: "AllMovies" })}
+                            style={(subNav.section === "AllMovies") ? styleLink.active : styleLink.inactive}><Typography>All</Typography></Button>
                     </Grid>
                     <Grid item md="auto">
-                        <Button onClick={() => setSubNav({ section: "Featured" })}><Typography>Featured</Typography></Button>
+                        <Button 
+                            onClick={() => setSubNav({ section: "Featured" })}
+                            style={(subNav.section === "Featured") ? styleLink.active : styleLink.inactive}><Typography>Featured</Typography></Button>
                     </Grid>
                     <Grid item md="auto">
-                        <Button onClick={() => setSubNav({ section: "Search" })}><Typography>Search</Typography></Button>
+                        <Button 
+                            onClick={() => setSubNav({ section: "Search" })}
+                            style={(subNav.section === "Search") ? styleLink.active : styleLink.inactive}><Typography>Search</Typography></Button>
                     </Grid>
                 </Grid>
 

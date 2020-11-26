@@ -35,24 +35,39 @@ const PoetryPage = () => {
                 );
         }
     }
+
+    const styleLink = {
+        active: {
+            color: "red"
+        },
+        inactive: {
+            color: "black"
+        }
+    }
     
     return (
         <Box>
             <Grid container direction="row">
                 
                 <Grid container justify="center" md="12" sm="12">
-                    <Typography variant="h4" onClick={() => setSubNav({ section: "All" })}>Poetry</Typography>
+                    <Typography variant="h4" onClick={() => setSubNav({ section: "AllPoems" })}>Poetry</Typography>
                 </Grid>
 
                 <Grid container md="12" sm="12" justify="center" spacing="3">
                     <Grid item md="auto">
-                        <Button onClick={() => setSubNav({ section: "AllPoems" })}><Typography>All</Typography></Button>
+                        <Button 
+                            onClick={() => setSubNav({ section: "AllPoems" })}
+                            style={(subNav.section === "AllPoems") ? styleLink.active : styleLink.inactive}><Typography>All</Typography></Button>
                     </Grid>
                     <Grid item md="auto">
-                        <Button onClick={() => setSubNav({ section: "Featured" })}><Typography>Featured</Typography></Button>
+                        <Button 
+                            onClick={() => setSubNav({ section: "Featured" })}
+                            style={(subNav.section === "Featured") ? styleLink.active : styleLink.inactive}><Typography>Featured</Typography></Button>
                     </Grid>
                     <Grid item md="auto">
-                        <Button onClick={() => setSubNav({ section: "Search" })}><Typography>Search</Typography></Button>
+                        <Button 
+                            onClick={() => setSubNav({ section: "Search" })}
+                            style={(subNav.section === "Search") ? styleLink.active : styleLink.inactive}><Typography>Search</Typography></Button>
                     </Grid>
                 </Grid>
 
