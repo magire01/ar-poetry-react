@@ -1,6 +1,8 @@
 import React from "react";
 import { Grid, Typography } from "@material-ui/core/";
 
+import Patreon from "./Patreon"
+
 const ContactSection = () => {
 
     return (
@@ -20,6 +22,7 @@ const ContactSection = () => {
                 <button>Submit</button>
             </form>
             </Typography>
+            <Patreon />
         </Grid>
     )
 }

@@ -5,7 +5,6 @@ import Typography from '@material-ui/core/Typography';
 
 import BioSection from "./HomeContent/Bio";
 import PublishedSection from "./HomeContent/Published";
-import PatreonSection from "./HomeContent/Patreon";
 import ContactSection from "./HomeContent/Contact";
 
 const HomePage = () => {
@@ -46,7 +45,6 @@ const HomePage = () => {
                     <div>
                         <BioSection />
                         <PublishedSection />
-                        <PatreonSection />
                         <ContactSection />
                     </div>
                 );
@@ -54,18 +52,8 @@ const HomePage = () => {
                 return (
                     <div>
                         <PublishedSection />
-                        <PatreonSection />
                         <ContactSection />
                         <BioSection />
-                    </div>
-                );
-            case "Patreon":
-                return (
-                    <div>
-                        <PatreonSection />
-                        <ContactSection />
-                        <BioSection />
-                        <PublishedSection />
                     </div>
                 );
             case "Contact":
@@ -74,7 +62,6 @@ const HomePage = () => {
                         <ContactSection />
                         <BioSection />
                         <PublishedSection />
-                        <PatreonSection />
                     </div>
                 );
             default:
@@ -82,7 +69,6 @@ const HomePage = () => {
                     <div>
                         <BioSection />
                         <PublishedSection />
-                        <PatreonSection />
                         <ContactSection />
                     </div>
                 );
@@ -102,9 +88,6 @@ const HomePage = () => {
                     </Grid>
                     <Grid item md="auto">
                         <Button onClick={() => setSubNav({ section: "Published" })} style={(subNav.section === "Published" ? textStyle.subHeaderActive : textStyle.subHeader)}><Typography>Published</Typography></Button>
-                    </Grid>
-                    <Grid item md="auto">
-                        <Button onClick={() => setSubNav({ section: "Patreon" })} style={(subNav.section === "Patreon" ? textStyle.subHeaderActive : textStyle.subHeader)}><Typography>Patreon</Typography></Button>
                     </Grid>
                     <Grid item md="auto">
                         <Button onClick={() => setSubNav({ section: "Contact" })} style={(subNav.section === "Contact" ? textStyle.subHeaderActive : textStyle.subHeader)}><Typography>Contact</Typography></Button>

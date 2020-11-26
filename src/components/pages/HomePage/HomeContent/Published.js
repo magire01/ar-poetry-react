@@ -29,7 +29,7 @@ const PublishedSection = () => {
 
         <Grid container style={{ marginTop: "5%" }}>
             <Grid item md="12" xs="12" style={{ width: 100, height:"auto", textAlign: "center"}}>
-                <Typography variant="h6">Published</Typography>
+                <Typography variant="h6">Published Work</Typography>
             </Grid>
             <Grid item md="12" xs="12">
                 <Typography style={{ paddingRight: 40, paddingLeft: 10, marginTop: "2%", textAlign: "center" }}>
