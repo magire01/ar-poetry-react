@@ -49,7 +49,6 @@ const MovieEntry = (props) => {
                     {props.data.director}
                 </Grid>
             </Grid>
-            
         </Container>
     )
 
